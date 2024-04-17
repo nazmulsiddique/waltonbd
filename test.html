@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+    <style>
+        .circle-area {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 150px;    
+        }
+
+        .circle-area-content {
+            position: relative;
+        }
+
+        .leaf-item {
+            width: 50px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-family: "Roboto", sans-serif;
+            border-radius: 100%;
+            background-color: red;
+            z-index: 1;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .leaf-item.active {
+            background-color: blue;
+            z-index: 2;
+        }
+
+        .clone {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        svg {
+            height: 500px;
+            overflow: visible;
+            width: 500px;
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .st0 { 
+            fill: none;
+            stroke:#000000;
+            stroke-width: 1;
+            stroke-miterlimit:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-area">
+        <div class="circle-area-content">
+          <div class="leaf-item 1 active">1</div>
+          <div class="leaf-item 2">2</div>
+          <div class="leaf-item 3">3</div>
+          <div class="leaf-item 4">4</div>
+          <div class="leaf-item 5">5</div>
+          <div class="leaf-item 6">6</div>
+          <div class="leaf-item 7">7</div>
+          <svg viewBox="0 0 300 300">
+            <circle id="holder" class="st0" cx="151" cy="151" r="150"/>
+          </svg>
+        </div>
+        <div id="activeClone" class="clone"></div>
+    </div>
+      <div class="container" style="text-align: center; margin-top: 300px;">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+      </div>
+      <script>
+        gsap.registerPlugin(MotionPathPlugin);
+
+        const circlePath = MotionPathPlugin.convertToPath("#holder", false)[0];
+        circlePath.id = "circlePath";
+        document.querySelector("svg").prepend(circlePath);
+
+        let items = gsap.utils.toArray(".leaf-item"),
+            numItems = items.length,
+            itemStep = 1 / numItems,
+            wrapProgress = gsap.utils.wrap(0, 1),
+            snap = gsap.utils.snap(itemStep),
+            wrapTracker = gsap.utils.wrap(0, numItems),
+            tracker = { item: 0 };
+
+        gsap.set(items, { motionPath: {
+            path: circlePath,
+            align: circlePath,
+            alignOrigin: [0.5, 0.5],
+            end: (i) => gsap.utils.wrap(0, 1, i / items.length + 0.75)
+            }, scale: 1.9 
+        });
+
+        const tl = gsap.timeline({ paused:true, reversed: true });
+
+        tl.to('.circle-area-content', {
+            rotation: 360, 
+            transformOrigin: 'center', 
+            duration: 1, 
+            ease: 'none'
+        });
+
+        tl.to(items, {
+            rotation: "-=360", 
+            transformOrigin: 'center', 
+            duration: 1, 
+            ease: 'none',
+        }, 0);
+
+        tl.to(tracker, {
+            item: numItems,
+            duration: 1, 
+            ease: 'none',
+            modifiers: {
+                item(value) {
+                    return wrapTracker(numItems - Math.round(value))
+                }
+            }
+        }, 0);
+
+        items.forEach(function (el, i) {
+
+            el.addEventListener("click", function () {
+                var current = tracker.item,
+                    activeItem = i;
+
+                if (i === current) {
+                    return;
+                }
+
+                //set active item to the item that was clicked and remove active class from all items
+                document.querySelector('.leaf-item.active').classList.remove('active');
+                items[activeItem].classList.add('active');
+
+                var diff = current - i;
+
+                if (Math.abs(diff) < numItems / 2) {
+                    moveWheel(diff * itemStep);
+                } else {
+                    var amt = numItems - Math.abs(diff);
+
+                    if (current > i) {
+                        moveWheel(amt * -itemStep);
+                    } else {
+                        moveWheel(amt * itemStep);
+                    }
+                }
+            });
+        });
+
+        document.getElementById('next').addEventListener("click", function () {
+            return moveWheel(-itemStep);
+        });
+
+        document.getElementById('prev').addEventListener("click", function () {
+            return moveWheel(itemStep);
+        });
+
+        function moveWheel(amount, i, index) {
+            
+            let progress = tl.progress();
+            tl.progress(wrapProgress(snap(tl.progress() + amount)))
+            let next = tracker.item;
+            tl.progress(progress);
+
+            document.querySelector('.leaf-item.active').classList.remove('active');
+            items[next].classList.add('active');  
+
+            gsap.to(tl, {
+                progress: snap(tl.progress() + amount),
+                modifiers: {
+                    progress: wrapProgress
+                }
+            });
+
+            // Clone the active item and position it in the center
+            let activeClone = document.getElementById('activeClone');
+            activeClone.innerHTML = items[next].innerHTML;
+        }
+    </script>
+</body>
+</html>
