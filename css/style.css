@@ -20,12 +20,24 @@ p{
     padding: 0;
     line-height: 0.8;
 }
+:root {
+    --wl-primary: #144A9D;
+    --wl-secondary: #6c757d;
+    --wl-success: #198754;
+    --wl-info: #0dcaf0;
+    --wl-warning: #ffc107;
+    --wl-danger: #dc3545;
+    --wl-light: #f8f9fa;
+    --wl-dark: #212529;
+    --wl-black: #000000;
+    --wl-black: #ffffff;
+  }
 body{
     font-family: "Lato", sans-serif;  
 }
 /* navbar style start */
 .main-menu .nav-item{
-    padding: 0 24px !important;
+    padding: 0 15px;
 }
 .main-menu .nav-link{
     text-transform: uppercase;
@@ -39,8 +51,77 @@ body{
 }
 .at-a-glance-top-bg{
     width: 100%;
-    height: 500px;
-    background: var(--bs-primary);
-    border-bottom-left-radius:70%;
-    border-bottom-right-radius:70%;
+    height: 600px;
+    background: var(--wl-primary);
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+}
+.at-a-glance-bottom-area{
+    background: var(--bs-white);
+    position: relative;
+    z-index: 10;
+    height: 300px;
+    margin-top: -17px;
+}
+.circle-area {
+    position: relative;
+    max-width: 900px;
+    height: 1000px;
+    margin: auto;
+    padding-top: 150px;    
+}
+.circle-area-content {
+    position: relative;
+}
+.leaf-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: #E8E8E8;
+    border: 3px solid var(--bs-white);
+    z-index: 3;
+    cursor: pointer;
+    position: relative;
+}
+.active-center-item {
+    width: 280px;
+    height: 280px;
+    border-radius: 100%;
+    background: #E8E8E8;
+    border: 3px solid var(--bs-white);
+    z-index: 5;
+    cursor: pointer;
+    position: relative;
+}
+.active-center-item img {
+    width: 300px;
+}
+.leaf-item.active {
+    background: #E8E8E8;
+    z-index: 5;
+    outline: 1px solid #82B3FF;
+    outline-offset: 3px;
+}
+.clone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+svg {
+    height: 700px;
+    overflow: visible;
+    width: 700px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.st0 { 
+    fill: none;
+    stroke:#000000;
+    stroke-width: 1;
+    stroke-miterlimit:1;
 }
