@@ -66,12 +66,12 @@ items.forEach(function (el, i) {
         }
     });
 });
-document.getElementById('next').addEventListener("click", function () {
-    return moveWheel(-itemStep);
-});
-document.getElementById('prev').addEventListener("click", function () {
-    return moveWheel(itemStep);
-});
+// document.getElementById('next').addEventListener("click", function () {
+//     return moveWheel(-itemStep);
+// });
+// document.getElementById('prev').addEventListener("click", function () {
+//     return moveWheel(itemStep);
+// });
 function moveWheel(amount, i, index) {   
     let progress = tl.progress();
     tl.progress(wrapProgress(snap(tl.progress() + amount)))
@@ -89,5 +89,96 @@ function moveWheel(amount, i, index) {
     activeClone.innerHTML = items[next].innerHTML;
 }
 $(document).ready(function(){
-
+    $("#walton").click(function(){
+        $("#waltonContent").show().removeClass("d-none");
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
+    });
+    $("#marcel").click(function(){
+        $("#marcelContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+    });
+    $("#plaza").click(function(){
+        $("#plazaContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#D24146");
+        $(".custom-button").css("background-color", "#D24146");
+        $(".active-center-item").css("background-color", "#FFD0D2");
+        $(".at-a-glance-bottom-area h2").css("color", "#D24146");
+    });
+    $("#plc").click(function(){
+        $("#plcContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+    });
+    $("#acc").click(function(){
+        $("#accContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+    });
+    $("#digitech").click(function(){
+        $("#digitechContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#safeContent").hide();
+        $("#risingbdContent").hide();
+    });
+    $("#safe").click(function(){
+        $("#safeContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#0F741F");
+        $(".custom-button").css("background-color", "#0F741F");
+        $(".active-center-item").css("background-color", "#D6FFAE");
+        $(".at-a-glance-bottom-area h2").css("color", "#0F741F");
+    });
+    $("#risingbd").click(function(){
+        $("#risingbdContent").show().removeClass("d-none");
+        $("#waltonContent").hide();
+        $("#marcelContent").hide();
+        $("#plazaContent").hide();
+        $("#plcContent").hide();
+        $("#accContent").hide();
+        $("#digitechContent").hide();
+        $("#safeContent").hide();
+    });
 });

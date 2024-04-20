@@ -30,7 +30,6 @@ p{
     --wl-light: #f8f9fa;
     --wl-dark: #212529;
     --wl-black: #000000;
-    --wl-black: #ffffff;
   }
 body{
     font-family: "Lato", sans-serif;  
@@ -53,15 +52,14 @@ body{
     width: 100%;
     height: 600px;
     background: var(--wl-primary);
-    border-bottom-left-radius:100%;
-    border-bottom-right-radius:100%;
+    border-radius:0 0 34% 34%;
 }
 .at-a-glance-bottom-area{
     background: var(--bs-white);
     position: relative;
     z-index: 10;
-    height: 300px;
-    margin-top: -17px;
+    height: 400px;
+    margin-top: -2px;
 }
 .circle-area {
     position: relative;
@@ -87,8 +85,8 @@ body{
     width: 280px;
     height: 280px;
     border-radius: 100%;
-    background: #E8E8E8;
-    border: 3px solid var(--bs-white);
+    background: #CADFFF;
+    border: 5px solid var(--bs-white);
     z-index: 5;
     cursor: pointer;
     position: relative;
@@ -121,7 +119,35 @@ svg {
 }
 .st0 { 
     fill: none;
-    stroke:#000000;
+    stroke:#04337A;
     stroke-width: 1;
     stroke-miterlimit:1;
+}
+.at-a-glance-bottom-area h2{
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 53.25px;
+    text-align: center;
+    color: var(--wl-primary);
+    text-transform: uppercase;
+    margin-top: 80px;
+}
+.at-a-glance-bottom-area p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+    text-align: center;
+    color: var(--wl-black);  
+}
+.custom-button{
+    background: #144A9D;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22.99px;
+    text-align: center;
+    color: var(--wl-light);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 0px solid;
+    text-transform: uppercase;
 }
