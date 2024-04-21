@@ -151,3 +151,61 @@ svg {
     border: 0px solid;
     text-transform: uppercase;
 }
+/* Fridge block style start */
+.fridge-block{
+    background: url(../images/fridge-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+}
+.block-text h2{
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 33.89px;
+    text-transform: uppercase;
+}
+.block-text p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.block-text .custom-button{
+    background: var(--wl-black);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22.99px;
+    text-align: center;
+    color: var(--wl-light);
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 0px solid;
+    text-transform: uppercase;
+}
+.ac-block{
+    background: url(../images/ac-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+    height: 750px;
+}
+.laptop-block{
+    background: url(../images/laptop-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+    height: 750px;
+}
+.mobile-block{
+    background: url(../images/mobile-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+    height: 750px;
+}
+.tv-block{
+    background: url(../images/tv-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 20px 0;
+    height: 750px;
+}
