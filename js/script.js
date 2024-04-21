@@ -112,6 +112,10 @@ $(document).ready(function(){
         $("#digitechContent").hide();
         $("#safeContent").hide();
         $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
     $("#plaza").click(function(){
         $("#plazaContent").show().removeClass("d-none");
@@ -136,6 +140,10 @@ $(document).ready(function(){
         $("#digitechContent").hide();
         $("#safeContent").hide();
         $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
     $("#acc").click(function(){
         $("#accContent").show().removeClass("d-none");
@@ -146,6 +154,10 @@ $(document).ready(function(){
         $("#digitechContent").hide();
         $("#safeContent").hide();
         $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
     $("#digitech").click(function(){
         $("#digitechContent").show().removeClass("d-none");
@@ -156,6 +168,10 @@ $(document).ready(function(){
         $("#accContent").hide();
         $("#safeContent").hide();
         $("#risingbdContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
     $("#safe").click(function(){
         $("#safeContent").show().removeClass("d-none");
@@ -180,5 +196,9 @@ $(document).ready(function(){
         $("#accContent").hide();
         $("#digitechContent").hide();
         $("#safeContent").hide();
+        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
+        $(".custom-button").css("background-color", "#144A9D");
+        $(".active-center-item").css("background-color", "#CADFFF");
+        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
 });
