@@ -292,3 +292,20 @@ svg {
 .top-button i{
     font-size: 30px;
 }
+
+/* Mega Menu style  */
+.main-menu .nav-item:hover .dropdown-menu {
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: var(--wl-black);
+}
+.main-menu .dropdown-menu h5{
+    color: var(--wl-light);
+    margin-top: 10px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 11px;
+}

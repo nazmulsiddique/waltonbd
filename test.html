@@ -1,198 +1,471 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
-    <style>
-        .circle-area {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            margin-top: 150px;    
-        }
-
-        .circle-area-content {
-            position: relative;
-        }
-
-        .leaf-item {
-            width: 50px;
-            height: 50px;
-            color: white;
-            text-align: center;
-            line-height: 50px;
-            font-size: 24px;
-            font-family: "Roboto", sans-serif;
-            border-radius: 100%;
-            background-color: red;
-            z-index: 1;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .leaf-item.active {
-            background-color: blue;
-            z-index: 2;
-        }
-
-        .clone {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        svg {
-            height: 500px;
-            overflow: visible;
-            width: 500px;
-            z-index: -1;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-
-        .st0 { 
-            fill: none;
-            stroke:#000000;
-            stroke-width: 1;
-            stroke-miterlimit:1;
-        }
-    </style>
-</head>
-<body>
-    <div class="circle-area">
-        <div class="circle-area-content">
-          <div class="leaf-item 1 active">1</div>
-          <div class="leaf-item 2">2</div>
-          <div class="leaf-item 3">3</div>
-          <div class="leaf-item 4">4</div>
-          <div class="leaf-item 5">5</div>
-          <div class="leaf-item 6">6</div>
-          <div class="leaf-item 7">7</div>
-          <svg viewBox="0 0 300 300">
-            <circle id="holder" class="st0" cx="151" cy="151" r="150"/>
-          </svg>
-        </div>
-        <div id="activeClone" class="clone"></div>
-    </div>
-      <div class="container" style="text-align: center; margin-top: 300px;">
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Walton Group</title>
+    <!-- all css start here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- all css end here -->
+  </head>
+  <body>
+    <div class="content-area">
+     <div class="header">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#"> <img src="images/logo.png" alt="Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Products
+                  </a>
+                  <div class="dropdown-menu px-3">
+                    <div class="row py-3 px-2">
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/icon/fridge-icon.png" alt="">
+                                <h5>Refrigerator</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Television</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Air Conditioner</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Mobile</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Computer</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>E-Bike</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Microwave</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Blender</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Washing Machine</h5>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <div class="single-category-menu text-center">
+                                <img src="images/logo.png" alt="">
+                                <h5>Home 
+                                    Appliances</h5>
+                            </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">jobs</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">support</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">E-plaza</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">contact us</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Language (English)</a>
+                </li>    
+                
+                </li>    
+              </ul>
+              <div class="d-flex">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  </li>    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-      <script>
-        gsap.registerPlugin(MotionPathPlugin);
+      <div class="at-a-glance-area">
+        <div class="at-a-glance-top-bg">
+            <div class="container">
+              <div class="circle-area">
+                <div class="circle-area-content">
+                  <div class="leaf-item 1 active" id="walton">
+                    <img src="images/walton-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 2" id="marcel">
+                    <img src="images/marcel-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 3" id="plaza">
+                    <img src="images/walton-plaza.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 4" id="plc">
+                    <img src="images/walton-plc-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 5" id="acc">
+                    <img src="images/acc-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 6" id="digitech">
+                    <img src="images/digi-tech-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 7" id="safe">
+                    <img src="images/safe-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="leaf-item 8" id="risingbd">
+                    <img src="images/rising-bd-logo.png" alt="" class="img-fluid">
+                  </div>
+                  <svg viewBox="0 0 300 300">
+                    <circle id="holder" class="st0" cx="151" cy="151" r="150"/>
+                  </svg>
+                </div>
+                <div class="clone">
+                  <div class="active-center-item d-flex justify-content-center align-items-center" id="activeClone">
+                    <img src="images/walton-logo.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="at-a-glance-bottom-area">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+              <div class="change-content" id="waltonContent">
+                <h2>Walton</h2>
+                <p class="mt-4">Walton is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Walton brand.</p>
+                <button class="custom-button mt-3">Read More</button>
+              </div>
+              <div class="change-content d-none" id="marcelContent">
+                <h2>Marcel</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="plazaContent">
+                <h2>Walton Plaza</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="plcContent">
+                <h2>Walton PLC</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="accContent">
+                <h2>ACC</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="digitechContent">
+                <h2>Digitech</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="safeContent">
+                <h2>Safe</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+              <div class="change-content d-none" id="risingbdContent">
+                <h2>Risingbd</h2>
+                <p class="mt-4">Marcel is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Marcel brand.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <div class="category-content">
+        <div class="fridge-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4 text-center block-text">
+                <h2>Refrigerator</h2>
+                <p class="mt-3">Welcome to Walton, a company that adds class to your lifestyle. It has enhanced and made lifestyle easier </p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 py-md-5 text-center mt-100">
+                <img src="images/refrigerator.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ac-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4 text-center block-text">
+                <h2>Air Conditioner</h2>
+                <p class="mt-3">If you are seeking the ultimate comfort for your home or office environment, WALTON’s innovative air conditioners come in handy with a variety of updated technology, </p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 pt-md-5 text-center mt-50">
+                <img src="images/ac.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4 text-center block-text text-white">
+                <h2>Laptop</h2>
+                <p class="mt-3">Experience the Latest Generation of Walton Laptops with Elegant Design, The Best-in-class Materials, and Exception Performance Without Compromise. </p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 pt-md-5 text-center mt-50">
+                <img src="images/laptop.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4 text-center block-text text-white">
+                <h2>mobile</h2>
+                <p class="mt-3">Indulge yourself to a world of opportunities brought to you by WALTON smart phones. Feel free to choose from the wide range of cutting-edge innovations and features </p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3 bg-light text-black">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <!-- <div class="col-md-8 pt-md-5 text-center">
+                <img src="images/laptop.png" alt="" class="img-fluid">
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="tv-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-5 text-center block-text text-white">
+                <h2>Television</h2>
+                <p class="mt-3">Welcome to the world of WALTON’s modern and user-friendly 4K, Smart, LED TV designed for all. With enhanced menus and recommendations, you can have seamless access to all your favorite</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center mt-100">
+                <img src="images/tv.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="computer-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4 text-center block-text text-white">
+                <h2>Computer</h2>
+                <p class="mt-3">In addition to everyday content production and home working, Walton offers desktop PCs perfect for online study and gaming. You can build your dream with Walton PC.</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <!-- <div class="col-md-8 pt-md-5 text-center">
+                <img src="images/computer.png" alt="" class="img-fluid">
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="hap-block">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-5 text-center block-text">
+                <h2>Microwave and Electric Oven</h2>
+                <p class="mt-3">Almost every house uses microwave oven in Bangladesh. The reason is pretty obvious. Microwave ovens can make you kitchen life every easy when it comes to heating, baking</p>
+                <a href="https://waltonbd.com" target="_blank">
+                  <button class="custom-button mt-3">Read More</button>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 pt-md-5 text-center mt-150">
+                <img src="images/oven.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div class="footer position-relative">
+        <div class="footer-section">
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="images/footer-logo.png" alt="" class="img-fluid">
+                <div class="social-icon mt-5">
+                  <p>Stay in touch with us</p>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <h3>help & information </h3>
+                <ul class="nav flex-column mt-3">
+                  <li class="nav-item">
+                    <a class="nav-link ps-0">Contact Us </a>
+                    <a class="nav-link ps-0">Terms & Conditions </a>
+                    <a class="nav-link ps-0">Privacy Policy </a>
+                    <a class="nav-link ps-0">Anti-Fraud Disclaimer </a>
+                    <a class="nav-link ps-0">Responsible Disclosure Policy </a>
+                    <a class="nav-link ps-0">FAQs </a>
+                    <a class="nav-link ps-0">Find A Store </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>About Walton Group </h3>
+                <ul class="nav flex-column mt-3">
+                  <li class="nav-item">
+                    <a class="nav-link ps-0">About us </a>
+                    <a class="nav-link ps-0">Careers at Walton </a>
+                    <a class="nav-link ps-0">Corporate responsibility </a>
+                    <a class="nav-link ps-0">Mobile and Walton apps</a>
+                    <a class="nav-link ps-0">Walton Marketplace</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>More From Walton  </h3>
+                <ul class="nav flex-column mt-3">
+                  <li class="nav-item">
+                    <a class="nav-link ps-0">Payments</a>
+                    <a class="nav-link ps-0">Cancellation and Returns</a>
+                    <a class="nav-link ps-0">Become a Seller</a>
+                    <a class="nav-link ps-0">Track Order</a>
+                    <a class="nav-link ps-0">Responsible Disclosure Policy</a>
+                    <a class="nav-link ps-0">FAQs </a>
+                    <a class="nav-link ps-0">Find A Store </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center copyright-text">
+                <p class="mb-0">Copyright © 2024 Walton Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-to-top">
+          <div class="top-button text-center" id="scrollToTopBtn">
+            <i class="fa-solid fa-angle-up"></i>
+            <p>Top</p>
+          </div>
+        </div>
+     </div>
+    </div>
 
-        const circlePath = MotionPathPlugin.convertToPath("#holder", false)[0];
-        circlePath.id = "circlePath";
-        document.querySelector("svg").prepend(circlePath);
-
-        let items = gsap.utils.toArray(".leaf-item"),
-            numItems = items.length,
-            itemStep = 1 / numItems,
-            wrapProgress = gsap.utils.wrap(0, 1),
-            snap = gsap.utils.snap(itemStep),
-            wrapTracker = gsap.utils.wrap(0, numItems),
-            tracker = { item: 0 };
-
-        gsap.set(items, { motionPath: {
-            path: circlePath,
-            align: circlePath,
-            alignOrigin: [0.5, 0.5],
-            end: (i) => gsap.utils.wrap(0, 1, i / items.length + 0.75)
-            }, scale: 1.9 
-        });
-
-        const tl = gsap.timeline({ paused:true, reversed: true });
-
-        tl.to('.circle-area-content', {
-            rotation: 360, 
-            transformOrigin: 'center', 
-            duration: 1, 
-            ease: 'none'
-        });
-
-        tl.to(items, {
-            rotation: "-=360", 
-            transformOrigin: 'center', 
-            duration: 1, 
-            ease: 'none',
-        }, 0);
-
-        tl.to(tracker, {
-            item: numItems,
-            duration: 1, 
-            ease: 'none',
-            modifiers: {
-                item(value) {
-                    return wrapTracker(numItems - Math.round(value))
-                }
-            }
-        }, 0);
-
-        items.forEach(function (el, i) {
-
-            el.addEventListener("click", function () {
-                var current = tracker.item,
-                    activeItem = i;
-
-                if (i === current) {
-                    return;
-                }
-
-                //set active item to the item that was clicked and remove active class from all items
-                document.querySelector('.leaf-item.active').classList.remove('active');
-                items[activeItem].classList.add('active');
-
-                var diff = current - i;
-
-                if (Math.abs(diff) < numItems / 2) {
-                    moveWheel(diff * itemStep);
-                } else {
-                    var amt = numItems - Math.abs(diff);
-
-                    if (current > i) {
-                        moveWheel(amt * -itemStep);
-                    } else {
-                        moveWheel(amt * itemStep);
-                    }
-                }
-            });
-        });
-
-        document.getElementById('next').addEventListener("click", function () {
-            return moveWheel(-itemStep);
-        });
-
-        document.getElementById('prev').addEventListener("click", function () {
-            return moveWheel(itemStep);
-        });
-
-        function moveWheel(amount, i, index) {
-            
-            let progress = tl.progress();
-            tl.progress(wrapProgress(snap(tl.progress() + amount)))
-            let next = tracker.item;
-            tl.progress(progress);
-
-            document.querySelector('.leaf-item.active').classList.remove('active');
-            items[next].classList.add('active');  
-
-            gsap.to(tl, {
-                progress: snap(tl.progress() + amount),
-                modifiers: {
-                    progress: wrapProgress
-                }
-            });
-
-            // Clone the active item and position it in the center
-            let activeClone = document.getElementById('activeClone');
-            activeClone.innerHTML = items[next].innerHTML;
-        }
-    </script>
-</body>
+<!-- all js start here -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/MotionPathPlugin.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- all js end here -->
+  </body>
 </html>
