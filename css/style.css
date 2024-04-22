@@ -156,7 +156,8 @@ svg {
     background: url(../images/fridge-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0 20px 0;
+    padding: 120px 0 20px 0;
+    height: 950px;
 }
 .block-text h2{
     font-size: 28px;
@@ -185,27 +186,50 @@ svg {
     background: url(../images/ac-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0 20px 0;
-    height: 750px;
+    padding: 120px 0 20px 0;
+    height: 950px;
 }
 .laptop-block{
     background: url(../images/laptop-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0 20px 0;
-    height: 750px;
+    padding: 120px 0 20px 0;
+    height: 950px;
 }
 .mobile-block{
     background: url(../images/mobile-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0 20px 0;
-    height: 750px;
+    padding: 120px 0 20px 0;
+    height: 950px;
 }
 .tv-block{
     background: url(../images/tv-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0 20px 0;
-    height: 750px;
+    padding: 120px 0 20px 0;
+    height: 950px;
+}
+.computer-block{
+    background: url(../images/computer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 20px 0;
+    height: 950px;
+}
+.hap-block{
+    background: url(../images/oven-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 20px 0;
+    height: 950px;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mt-150{
+    margin-top: 150px;
 }
