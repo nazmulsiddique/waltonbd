@@ -88,6 +88,13 @@ function moveWheel(amount, i, index) {
     let activeClone = document.getElementById('activeClone');
     activeClone.innerHTML = items[next].innerHTML;
 }
+
+// Scroll to Top Button
+var mybutton = document.getElementById("scrollToTopBtn");
+mybutton.addEventListener("click", function () {
+    document.documentElement.scrollTop = 0;
+});
+
 $(document).ready(function(){
     $("#walton").click(function(){
         $("#waltonContent").show().removeClass("d-none");

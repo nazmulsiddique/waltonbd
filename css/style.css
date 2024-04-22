@@ -30,6 +30,7 @@ p{
     --wl-light: #f8f9fa;
     --wl-dark: #212529;
     --wl-black: #000000;
+    --wl-link: #494949;
   }
 body{
     font-family: "Lato", sans-serif;  
@@ -232,4 +233,62 @@ svg {
 }
 .mt-150{
     margin-top: 150px;
+}
+/* footer-section style */
+.footer-section{
+    background: #EEF0F2;
+    padding: 100px 0px 20px 0px;
+}
+.footer-section p{
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.23px;   
+    margin-bottom: 25px;
+}
+.footer-section i{
+    font-size: 30px;
+    padding-right: 15px;
+}
+.footer-section h3{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    color: #494949;
+    text-transform: capitalize;
+}
+.footer-section .nav-link {
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--wl-link);
+    cursor: pointer;
+}
+.copyright-text p{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    padding: 10px 0 0 0;
+}
+.bottom-to-top{
+    position: absolute;
+    right: 0;
+    bottom: 450px;
+    z-index: 9999;
+}
+.top-button{
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background: #243859;
+    border: 2px solid #EAEAEA;
+    padding-top: 20px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.top-button i{
+    font-size: 30px;
 }
