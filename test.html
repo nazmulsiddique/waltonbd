@@ -29,26 +29,29 @@
                   </a>
                   <div class="dropdown-menu px-3">
                     <div class="row py-3 px-2">
-                      <div class="col">
-                        <a href="#">
+                        <div class="col">
                             <div class="single-category-menu text-center">
-                                <img src="images/icon/fridge-icon.png" alt="">
-                                <h5>Refrigerator</h5>
+                              <img src="images/icon/fridge-icon.png" alt="">
+                              <h5>Refrigerator</h5>
+                              <div class="submenu">
+                                Submenu content goes here
+                              </div>
                             </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="#">
+                          </div>
+                          
+                          <div class="col">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
-                                <h5>Television</h5>
+                              <img src="images/icon/tv-icon.png" alt="">
+                              <h5>Television</h5>
+                              <div class="submenu">
+                                adfads sdfasdf asdf
+                              </div>
                             </div>
-                        </a>
-                      </div>
+                          </div>
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/ac-icon.png" alt="">
                                 <h5>Air Conditioner</h5>
                             </div>
                         </a>
@@ -56,7 +59,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/mobile-icon.png" alt="">
                                 <h5>Mobile</h5>
                             </div>
                         </a>
@@ -64,7 +67,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/computer-icon.png" alt="">
                                 <h5>Computer</h5>
                             </div>
                         </a>
@@ -72,7 +75,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/ebike-icon.png" alt="">
                                 <h5>E-Bike</h5>
                             </div>
                         </a>
@@ -80,7 +83,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/oven-icon.png" alt="">
                                 <h5>Microwave</h5>
                             </div>
                         </a>
@@ -88,7 +91,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/blender-icon.png" alt="">
                                 <h5>Blender</h5>
                             </div>
                         </a>
@@ -96,7 +99,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/wm-icon.png" alt="">
                                 <h5>Washing Machine</h5>
                             </div>
                         </a>
@@ -104,7 +107,7 @@
                       <div class="col">
                         <a href="#">
                             <div class="single-category-menu text-center">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/icon/hap-icon.png" alt="">
                                 <h5>Home 
                                     Appliances</h5>
                             </div>
@@ -458,7 +461,7 @@
         </div>
      </div>
     </div>
-
+      
 <!-- all js start here -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -466,6 +469,29 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/MotionPathPlugin.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const categoryMenus = document.querySelectorAll(".single-category-menu");
+      
+          categoryMenus.forEach(menu => {
+            menu.addEventListener("click", function() {
+              const submenu = menu.querySelector(".submenu");
+      
+              // Toggle visibility of submenu
+              submenu.classList.toggle("show");
+      
+              // Hide other submenus
+              categoryMenus.forEach(otherMenu => {
+                if (otherMenu !== menu) {
+                  otherMenu.querySelector(".submenu").classList.remove("show");
+                }
+              });
+            });
+          });
+        });
+      </script>
+      
+      
     <!-- all js end here -->
   </body>
 </html>
