@@ -31,9 +31,11 @@ p{
     --wl-dark: #212529;
     --wl-black: #000000;
     --wl-link: #494949;
+    --wl-blue: #23a3dd;
   }
 body{
-    font-family: "Inter", sans-serif; 
+    font-family: "Inter", sans-serif;
+    background: var(--wl-light);
 }
 /* navbar style start */
 .main-menu .nav-item{
@@ -242,35 +244,50 @@ svg {
     margin-top: 150px;
 }
 /* footer-section style */
+.footer{
+    padding: 0px 0px 20px 0px;
+    background: #fff !important;
+}
 .footer-section{
-    background: #EEF0F2;
-    padding: 100px 0px 20px 0px;
+    background: #f8f8f9;
 }
 .footer-section p{
     font-family: "Inter", sans-serif;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 15.23px;   
     margin-bottom: 25px;
 }
 .footer-section i{
     font-size: 30px;
-    padding-right: 15px;
+    padding: 8px;
+    background: var(--wl-light);
+    color: var(--wl-black);
+    text-align: center;
+}
+.footer-section i:hover{
+    background: var(--wl-blue);
+    color: var(--wl-light);
+    border-radius: 50px;
+    cursor: pointer;
 }
 .footer-section h3{
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 19.36px;
-    color: #494949;
+    color: var(--wl-blue);
     text-transform: capitalize;
 }
 .footer-section .nav-link {
     font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     color: var(--wl-link);
     cursor: pointer;
+}
+.footer-section .nav-link:hover {
+    color: var(--wl-blue);
 }
 .copyright-text p{
     font-family: "Inter", sans-serif;
