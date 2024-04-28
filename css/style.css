@@ -325,7 +325,15 @@ svg {
     display: block;
     left: 50%;
     transform: translateX(-50%);
-    width: 1200px;
+    width: 1300px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0;
+}
+.common-dropdown:hover .dropdown-menu {
+    display: block !important;
+    left: 0 !important;
+    transform: translateX(-0%) !important;
+    width: 250px !important;
     background: rgba(0, 0, 0, 0.75);
     padding: 0;
 }
@@ -375,4 +383,37 @@ svg {
 }
 .my-dropdown-list li:hover{
     background: var(--wl-black);
+}
+.common-dropdown li{
+    list-style: none !important;
+    display: block;
+    padding: 5px 15px 5px 0;
+}
+.common-dropdown li a{
+    padding: 10px 20px 10px 0 !important;
+    font-size: 12px !important;
+    border-bottom: 1px solid  #413E3E !important;
+    color: var(--wl-light) !important;
+    margin-left: 20px !important;
+    display: inline-block;
+    line-height: normal !important;
+    width: 97% !important;
+}
+.common-dropdown li:hover{
+    background: var(--wl-black);
+}
+.search .search-column{
+    border-bottom: 1px solid var(--wl-light);
+}
+.search input{
+    background: transparent;
+    border: 0px solid;
+}
+.search .form-control:focus {
+    color: var(--wl-light);
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(13, 110, 253, .25);
+    border-radius: 0px;
 }
