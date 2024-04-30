@@ -186,10 +186,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-top-bg").css("background-color", "#1A9FDC");
+        $(".custom-button").css("background-color", "#1A9FDC");
         $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
+        $(".at-a-glance-bottom-area h2").css("color", "#1A9FDC");
     });
     $("#digitech").click(function(){
         $("#digitechContent").show().removeClass("d-none");
@@ -205,10 +205,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-top-bg").css("background-color", "#0072BB");
+        $(".custom-button").css("background-color", "#0072BB");
         $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
+        $(".at-a-glance-bottom-area h2").css("color", "#0072BB");
     });
     $("#safe").click(function(){
         $("#safeContent").show().removeClass("d-none");
@@ -224,10 +224,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#0F741F");
-        $(".custom-button").css("background-color", "#0F741F");
+        $(".at-a-glance-top-bg").css("background-color", "#278236");
+        $(".custom-button").css("background-color", "#278236");
         $(".active-center-item").css("background-color", "#D6FFAE");
-        $(".at-a-glance-bottom-area h2").css("color", "#0F741F");
+        $(".at-a-glance-bottom-area h2").css("color", "#278236");
     });
     $("#risingbd").click(function(){
         $("#risingbdContent").show().removeClass("d-none");
@@ -281,10 +281,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-top-bg").css("background-color", "#114D9D");
+        $(".custom-button").css("background-color", "#114D9D");
         $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
+        $(".at-a-glance-bottom-area h2").css("color", "#114D9D");
     });
     $("#nusdat").click(function(){
         $("#nusdatContent").show().removeClass("d-none");
@@ -338,9 +338,9 @@ $(document).ready(function(){
         $("#originContent").hide();
         $("#nusdatContent").hide();
         $("#wslContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
-        $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
+        $(".at-a-glance-top-bg").css("background-color", "#F9A634");
+        $(".custom-button").css("background-color", "#F9A634");
+        $(".active-center-item").css("background-color", "#EECC9D");
+        $(".at-a-glance-bottom-area h2").css("color", "#F9A634");
     });
 });
