@@ -61,17 +61,17 @@ body{
     background: var(--wl-light);
     position: relative;
     z-index: 10;
-    height: 400px;
+    height: 450px;
     margin-top: 0px;
     padding: 100px 0px;
     border-radius:50% 50%  0 0 / 100% 100% 0 0;
 }
 .circle-area {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     height: 1000px;
     margin: auto;
-    padding-top: 150px;    
+    padding-top: 50px;    
 }
 .circle-area-content {
     position: relative;
@@ -101,6 +101,7 @@ body{
 }
 .active-center-item img {
     width: 300px;
+    padding: 15px;
 }
 .leaf-item.active {
     background: #E8E8E8;
@@ -115,15 +116,15 @@ body{
 }
 .clone {
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
 }
 svg {
-    height: 700px;
+    height: 900px;
     overflow: visible;
-    width: 700px;
+    width: 900px;
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -166,6 +167,10 @@ svg {
     text-transform: uppercase;
 }
 /* Fridge block style start */
+.category-content{
+    position: relative;
+    z-index: 99;
+}
 .fridge-block{
     background: url(../images/fridge-bg.png);
     background-repeat: no-repeat;
