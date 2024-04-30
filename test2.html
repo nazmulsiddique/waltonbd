@@ -1,0 +1,53 @@
+//  Code for menu scrol left to right
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Products
+    </a>
+    <div class="dropdown-menu">
+        <div class="p-0 m-0 all-category-list-menu scrollable">
+            <!-- Your existing code for second-label-menu divs here -->
+        </div>
+        <div class="scroll-left">&lt;</div>
+        <div class="scroll-right">&gt;</div>
+    </div>
+</li>
+.all-category-list-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.second-label-menu {
+    flex: 0 0 calc(10% - 10px);
+    margin: 0 5px;
+    min-width: 150px;
+}
+
+.scrollable {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.scroll-left,
+.scroll-right {
+    cursor: pointer;
+}
+
+.scroll-left,
+.scroll-right {
+    padding: 10px;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollableMenu = document.querySelector(".all-category-list-menu.scrollable");
+    const scrollLeft = document.querySelector(".scroll-left");
+    const scrollRight = document.querySelector(".scroll-right");
+
+    scrollLeft.addEventListener("click", function () {
+        scrollableMenu.scrollLeft -= 100; // Adjust scroll distance as needed
+    });
+
+    scrollRight.addEventListener("click", function () {
+        scrollableMenu.scrollLeft += 100; // Adjust scroll distance as needed
+    });
+});
