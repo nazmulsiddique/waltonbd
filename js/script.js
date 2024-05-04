@@ -66,12 +66,12 @@ items.forEach(function (el, i) {
         }
     });
 });
-// document.getElementById('next').addEventListener("click", function () {
-//     return moveWheel(-itemStep);
-// });
-// document.getElementById('prev').addEventListener("click", function () {
-//     return moveWheel(itemStep);
-// });
+document.getElementById('next').addEventListener("click", function () {
+    return moveWheel(-itemStep);
+});
+document.getElementById('prev').addEventListener("click", function () {
+    return moveWheel(itemStep);
+});
 function moveWheel(amount, i, index) {   
     let progress = tl.progress();
     tl.progress(wrapProgress(snap(tl.progress() + amount)))
@@ -85,8 +85,8 @@ function moveWheel(amount, i, index) {
             progress: wrapProgress
         }
     });
-    let activeClone = document.getElementById('activeClone');
-    activeClone.innerHTML = items[next].innerHTML;
+    // let activeClone = document.getElementById('activeClone');
+    // activeClone.innerHTML = items[next].innerHTML;
 }
 
 // Scroll to Top Button
