@@ -167,13 +167,13 @@ svg {
     text-transform: uppercase;
 }
 .ml-700{
-    margin-left: 700px;
+    margin-left: 850px;
 }
 .leaf-arrow-area{
     position: absolute;
     top: 600px;
-    left: 100px;
-    z-index: 99999;
+    left: 30px;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
 }
@@ -182,6 +182,7 @@ svg {
     height: 50px;
     background: #144A9D;
     border-radius: 50px;
+    cursor: pointer;
 }
 .leaf-arrow i{
     display: flex;
@@ -353,6 +354,10 @@ svg {
 }
 
 /* Mega Menu style  */
+.main-menu .nav-item:hover {
+    background: #000;
+    border-radius: 5px 5px 0 0;
+}
 .main-menu .nav-item a {
     line-height: 40px;
 }
@@ -361,7 +366,7 @@ svg {
     left: 50%;
     transform: translateX(-50%);
     width: 1300px;
-    background: var(--wl-black);
+    background: #000000dc;
     padding: 0;
 }
 .all-category-list-menu {
@@ -376,7 +381,7 @@ svg {
 
 .second-label-menu {
     flex: 0 0 calc(10% - 10px);
-    margin: 0 5px;
+    margin: 0px;
     min-width: 150px;
 }
 
@@ -443,7 +448,7 @@ svg {
     background: var(--wl-black);
     color: var(--wl-light);
     text-align: start;
-    margin-left: -20px;
+    margin-left: -9px;
 }
 .my-dropdown-list li a{
     padding: 10px 20px 10px 0;
