@@ -271,6 +271,13 @@ svg {
     padding: 70px 0 20px 0;
     height: 750px;
 }
+.eap-block{
+    background: url(../images/eap-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 20px 0;
+    height: 750px;
+}
 .mt-50{
     margin-top: 50px;
 }
