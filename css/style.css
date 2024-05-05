@@ -32,6 +32,7 @@ p{
     --wl-black: #000000;
     --wl-link: #494949;
     --wl-blue: #23a3dd;
+    --ml-primary: #00317D;
   }
 body{
     font-family: "Inter", sans-serif;
