@@ -278,6 +278,27 @@ svg {
     padding: 70px 0 20px 0;
     height: 750px;
 }
+.mhap-block{
+    background: url(../images/marcel/mhap-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 20px 0;
+    height: 750px;
+}
+.mwm-block{
+    background: url(../images/marcel/mwm-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 20px 0;
+    height: 750px;
+}
+.meap-block{
+    background: url(../images/marcel/meap-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 20px 0;
+    height: 750px;
+}
 .mt-50{
     margin-top: 50px;
 }
@@ -407,12 +428,12 @@ svg {
   }
   
   ::-webkit-scrollbar-track {
-    background: rgb(48, 48, 48);
+    background: var(--wl-black);
     height: 4px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--wl-black);
+    background: rgb(182, 181, 181);
     border-radius: 6px;
     height: 2px;
   }
@@ -445,8 +466,7 @@ svg {
     margin-top: 0;
 }
 .my-dropdown ul{
-    margin-top: 21px;
-    padding: 0;
+    padding-top: 21px;
 }
 .my-dropdown ul li{
     display: block;
