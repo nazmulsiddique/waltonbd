@@ -111,7 +111,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -129,10 +129,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#00317D");
-        $(".custom-button").css("background-color", "#00317D");
-        $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#00317D");
+        $(".at-a-glance-top-bg").css("background-color", "#D24146");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#D24146");
+        $(".active-center-item").css("background-color", "#FFD0D2");
+        $(".at-a-glance-bottom-area h2").css("color", "#D24146");
     });
     $("#plaza").click(function(){
         $("#plazaContent").show().removeClass("d-none");
@@ -149,7 +149,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#D24146");
-        $(".custom-button").css("background-color", "#D24146");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#D24146");
         $(".active-center-item").css("background-color", "#FFD0D2");
         $(".at-a-glance-bottom-area h2").css("color", "#D24146");
     });
@@ -168,7 +168,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -187,7 +187,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#1A9FDC");
-        $(".custom-button").css("background-color", "#1A9FDC");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#1A9FDC");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#1A9FDC");
     });
@@ -206,7 +206,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#0072BB");
-        $(".custom-button").css("background-color", "#0072BB");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#0072BB");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#0072BB");
     });
@@ -225,7 +225,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#278236");
-        $(".custom-button").css("background-color", "#278236");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#278236");
         $(".active-center-item").css("background-color", "#D6FFAE");
         $(".at-a-glance-bottom-area h2").css("color", "#278236");
     });
@@ -244,7 +244,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -263,7 +263,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -282,7 +282,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#114D9D");
-        $(".custom-button").css("background-color", "#114D9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#114D9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#114D9D");
     });
@@ -301,7 +301,7 @@ $(document).ready(function(){
         $("#wslContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -320,7 +320,7 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#chemicalContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#144A9D");
-        $(".custom-button").css("background-color", "#144A9D");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#144A9D");
         $(".active-center-item").css("background-color", "#CADFFF");
         $(".at-a-glance-bottom-area h2").css("color", "#144A9D");
     });
@@ -339,7 +339,7 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $(".at-a-glance-top-bg").css("background-color", "#F9A634");
-        $(".custom-button").css("background-color", "#F9A634");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#F9A634");
         $(".active-center-item").css("background-color", "#EECC9D");
         $(".at-a-glance-bottom-area h2").css("color", "#F9A634");
     });
