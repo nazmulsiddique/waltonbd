@@ -224,10 +224,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#278236");
-        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#278236");
+        $(".at-a-glance-top-bg").css("background-color", "#056715");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#056715");
         $(".active-center-item").css("background-color", "#D6FFAE");
-        $(".at-a-glance-bottom-area h2").css("color", "#278236");
+        $(".at-a-glance-bottom-area h2").css("color", "#056715");
     });
     $("#risingbd").click(function(){
         $("#risingbdContent").show().removeClass("d-none");
