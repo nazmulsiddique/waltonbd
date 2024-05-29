@@ -186,10 +186,10 @@ $(document).ready(function(){
         $("#nusdatContent").hide();
         $("#wslContent").hide();
         $("#chemicalContent").hide();
-        $(".at-a-glance-top-bg").css("background-color", "#1A9FDC");
-        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#1A9FDC");
-        $(".active-center-item").css("background-color", "#CADFFF");
-        $(".at-a-glance-bottom-area h2").css("color", "#1A9FDC");
+        $(".at-a-glance-top-bg").css("background-color", "#1086BC");
+        $(".at-a-glance-bottom-area .custom-button").css("background-color", "#1086BC");
+        $(".active-center-item").css("background-color", "#B1E7FF");
+        $(".at-a-glance-bottom-area h2").css("color", "#1086BC");
     });
     $("#digitech").click(function(){
         $("#digitechContent").show().removeClass("d-none");
