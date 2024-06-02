@@ -232,29 +232,15 @@ svg {
     padding: 70px 0 20px 0;
     height: 750px;
 }
-.fan-block{
-    background: url(../images/safe/sfan-bg.png);
+.accwm-block{
+    background: url(../images/marcel/mwm-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0 20px 0;
     height: 750px;
 }
-.ssocket-block{
-    background: url(../images/safe/ssocket-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 70px 0 20px 0;
-    height: 750px;
-}
-.seap-block{
-    background: url(../images/safe/seap-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 70px 0 20px 0;
-    height: 750px;
-}
-.shap-block{
-    background: url(../images/safe/sblender-bg.png);
+.acctv-block{
+    background: url(../images/tv-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0 20px 0;
